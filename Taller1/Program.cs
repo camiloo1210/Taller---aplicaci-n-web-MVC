@@ -1,4 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TallerMVC>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TallerMVC") ?? throw new InvalidOperationException("Connection string 'TallerMVC' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
