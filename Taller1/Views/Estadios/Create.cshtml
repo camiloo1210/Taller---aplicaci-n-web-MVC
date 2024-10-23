@@ -1,7 +1,7 @@
 ﻿@model Taller1.Models.Estadio
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "CrearEstadio";
 }
 
 <h1>Create</h1>
@@ -27,15 +27,16 @@
                 <input asp-for="Cpacidad" class="form-control" />
                 <span asp-validation-for="Cpacidad" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" type="button" class="btn btn-danger">Regresar</a>
 </div>
 
 @section Scripts {

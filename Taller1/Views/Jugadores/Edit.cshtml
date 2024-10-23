@@ -1,10 +1,10 @@
 ﻿@model Taller1.Models.Jugador
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "EditarEstadio";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Jugador</h4>
 <hr />
@@ -33,15 +33,16 @@
                 <select asp-for="IdEquipo" class="form-control" asp-items="ViewBag.IdEquipo"></select>
                 <span asp-validation-for="IdEquipo" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" type="button" class="btn btn-danger">Regresar</a>
 </div>
 
 @section Scripts {

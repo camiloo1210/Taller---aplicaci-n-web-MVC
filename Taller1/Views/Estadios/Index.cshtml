@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Taller1.Models.Estadio>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Estadios LigaPro";
 }
 
-<h1>Index</h1>
+<h1>Estadios</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" type="button" class="btn btn-success">Crear Nuevo </a>
 </p>
 <table class="table">
     <thead>
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.Cpacidad)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdEstadio">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdEstadio">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdEstadio">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdEstadio" type="button" class="btn btn-success">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdEstadio" type="button" class="btn btn-warning">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdEstadio" type="button" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
 }

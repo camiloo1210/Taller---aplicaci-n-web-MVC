@@ -1,10 +1,10 @@
 ﻿@model Taller1.Models.Estadio
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "DetallesEstadio";
 }
 
-<h1>Details</h1>
+<h1>Detalles</h1>
 
 <div>
     <h4>Estadio</h4>
@@ -31,6 +31,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdEstadio">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdEstadio" type="button" class="btn btn-success">Editar</a> |
+    <a asp-action="Index" type="button" class="btn btn-danger">Regresar </a>
 </div>
