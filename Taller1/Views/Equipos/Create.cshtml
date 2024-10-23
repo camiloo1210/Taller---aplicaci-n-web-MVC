@@ -1,12 +1,12 @@
 ﻿@model Taller1.Models.Equipo
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "CrearEquipo";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
-<h4>Equipo</h4>
+<h4>Nuevo Equipo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -37,16 +37,18 @@
                 <input asp-for="Estadio" class="form-control" />
                 <span asp-validation-for="Estadio" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-success" />
             </div>
+            <br />
+            <a asp-action="Index" type="button" class="btn btn-danger">Regresar</a>
+            
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

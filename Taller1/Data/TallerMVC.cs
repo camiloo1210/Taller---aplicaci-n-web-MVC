@@ -13,4 +13,8 @@ using Taller1.Models;
         }
 
         public DbSet<Taller1.Models.Equipo> Equipo { get; set; } = default!;
+
+public DbSet<Taller1.Models.Jugador> Jugador { get; set; } = default!;
+
+public DbSet<Taller1.Models.Estadio> Estadio { get; set; } = default!;
     }
