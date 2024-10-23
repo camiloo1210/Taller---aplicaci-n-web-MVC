@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Taller1.Models
 {
@@ -14,8 +15,10 @@ namespace Taller1.Models
         public int Titulos { get; set; }
         [Required]
         public bool AceptaExtranjeros {  get; set; }
+        public Estadio? Estadio { get; set; }
         [Required]
-        public string Estadio {  get; set; }
+        [ForeignKey("Estadio")]
+        public int IdEstadio {  get; set; }
 
     }
 }
